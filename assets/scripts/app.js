@@ -90,6 +90,7 @@ class ProjectItem {
 
     this.connectSwitchButton(type);
     this.connectMoreInfoButton();
+    this.connectDrag();
   }
 
   update(updateProjectLists, type) {
@@ -131,6 +132,13 @@ class ProjectItem {
 
     this.hasActiveTooltip = true;
     tooltip.attach();
+  }
+
+  connectDrag() {
+    document.getElementById(this.id).addEventListener('dragstart', event => {
+      event.dataTransfer.setData('text/plain', this.id);
+      event.dataTransfer.effectAllowed = 'move';
+    });
   }
 }
 
