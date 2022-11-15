@@ -1,0 +1,14 @@
+{
+  "name": "project-planner",
+  "version": "1.0.0",
+  "description": "Manage all your Projects with this useful Project Planner.",
+  "scripts": {
+    "start:dev": "serve"
+  },
+  "keywords": [],
+  "author": "ThomasCode92",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.1.1"
+  }
+}
