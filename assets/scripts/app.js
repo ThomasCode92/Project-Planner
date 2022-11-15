@@ -159,6 +159,8 @@ class ProjectList {
       );
     }
     console.log(this.projects);
+
+    this.connectDroppable();
   }
 
   setSwitchHandler(switchHandler) {
@@ -175,6 +177,29 @@ class ProjectList {
     const projectIndex = this.projects.findIndex(p => p.id === projectId);
     this.switchHandler(this.projects.find(p => p.id === projectId));
     this.projects.splice(projectIndex, 1);
+  }
+
+  connectDroppable() {
+    const list = document.querySelector(`#${this.type}-projects ul`);
+
+    list.addEventListener('dragenter', event => {
+      if (event.dataTransfer.types[0] === 'text/plain') {
+        event.preventDefault();
+        list.parentElement.classList.add('droppable');
+      }
+    });
+
+    list.addEventListener('dragover', event => {
+      if (event.dataTransfer.types[0] === 'text/plain') {
+        event.preventDefault();
+      }
+    });
+
+    list.addEventListener('dragleave', event => {
+      if (event.relatedTarget.closest(`#${this.type}-projects ul`) !== list) {
+        list.parentElement.classList.remove('droppable');
+      }
+    });
   }
 }
 
