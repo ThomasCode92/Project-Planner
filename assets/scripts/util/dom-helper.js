@@ -1,4 +1,4 @@
-class DOMHelper {
+export class DOMHelper {
   static moveElement(elementId, newDestinationSelector) {
     const element = document.getElementById(elementId);
     const destinationElement = document.querySelector(newDestinationSelector);
