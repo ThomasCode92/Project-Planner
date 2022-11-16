@@ -1,4 +1,3 @@
-import { Tooltip } from './tooltip.js';
 import { DOMHelper } from '../util/dom-helper.js';
 
 export class ProjectItem {
@@ -46,12 +45,16 @@ export class ProjectItem {
     const projectElement = document.getElementById(this.id);
     const tooltipText = projectElement.dataset.extraInfo;
 
-    const tooltip = new Tooltip(tooltipText, this.id, () => {
-      this.hasActiveTooltip = false;
-    });
+    import('./tooltip.js').then(module => {
+      const { Tooltip } = module;
 
-    this.hasActiveTooltip = true;
-    tooltip.attach();
+      const tooltip = new Tooltip(tooltipText, this.id, () => {
+        this.hasActiveTooltip = false;
+      });
+
+      this.hasActiveTooltip = true;
+      tooltip.attach();
+    });
   }
 
   connectDrag() {
