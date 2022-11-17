@@ -64,9 +64,5 @@ export class ProjectItem {
       event.dataTransfer.setData('text/plain', this.id);
       event.dataTransfer.effectAllowed = 'move';
     });
-
-    item.addEventListener('dragend', event => {
-      // ...
-    });
   }
 }
