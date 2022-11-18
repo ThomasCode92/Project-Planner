@@ -4,7 +4,7 @@
   "description": "Manage all your Projects with this useful Project Planner.",
   "scripts": {
     "start:dev": "serve",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.prod.js",
     "build:dev": "webpack serve"
   },
   "keywords": [],
