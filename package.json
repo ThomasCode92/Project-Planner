@@ -4,7 +4,8 @@
   "description": "Manage all your Projects with this useful Project Planner.",
   "scripts": {
     "start:dev": "serve",
-    "build": "webpack"
+    "build": "webpack",
+    "build:dev": "webpack serve"
   },
   "keywords": [],
   "author": "ThomasCode92",
@@ -16,6 +17,7 @@
     "prettier": "^2.7.1",
     "serve": "^14.1.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0"
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }
