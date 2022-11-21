@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Manage all your Projects with this useful Project Planner.",
   "scripts": {
-    "start:dev": "serve",
+    "start:dev": "serve dist",
     "build": "webpack --config webpack.config.prod.js",
     "build:dev": "webpack serve"
   },
@@ -15,6 +15,7 @@
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.1",
     "serve": "^14.1.1",
     "webpack": "^5.75.0",

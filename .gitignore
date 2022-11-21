@@ -2,4 +2,4 @@
 node_modules
 
 # Output file - Regenerate with 'npm run build'
-/assets/scripts
+dist
