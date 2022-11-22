@@ -20,6 +20,14 @@ module.exports = {
       directory: path.resolve(__dirname),
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({

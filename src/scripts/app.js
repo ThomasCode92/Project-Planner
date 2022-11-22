@@ -1,3 +1,5 @@
+import '../styles/app.css';
+
 import { ProjectList } from './app/project-list';
 
 class App {
