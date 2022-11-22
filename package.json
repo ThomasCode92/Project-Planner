@@ -10,7 +10,11 @@
   "keywords": [],
   "author": "ThomasCode92",
   "license": "ISC",
+  "browserslist": "> 0.2%, not dead",
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.2",
     "eslint": "^8.27.0",
